@@ -1,0 +1,6 @@
+/* students.css — edit styles for students. */
+.page-students .table { margin-top:24px }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-students, .modal-body[data-page="students"]) { --page-title-color: #202d39; }
+:where(.page-students, .modal-body[data-page="students"]) h1 { color: var(--page-title-color); }

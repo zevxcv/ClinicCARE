@@ -1,0 +1,6 @@
+/* document.css — edit styles for document. */
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-document, .modal-body[data-page="document"]) { --page-title-color: #202d39; }
+:where(.page-document, .modal-body[data-page="document"]) h1 { color: var(--page-title-color); }

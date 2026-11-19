@@ -1,0 +1,47 @@
+/* modals.css — edit styles for modals. */
+dialog.cc-modal { width:min(940px,96vw);max-height:90dvh;overflow:auto;border:1px solid #fff;border-radius:22px;padding:24px;background:#edf7f9;box-shadow:0 20px 80px #143c4755;color:inherit }
+
+dialog::backdrop { background:#122b4666;backdrop-filter:blur(5px) }
+
+.modal-toolbar { display:flex;justify-content:flex-end;gap:8px;position:sticky;top:0;background:#edf7f9;z-index:2 }
+
+.modal-body .editor { max-width:none }
+
+.modal-body .page-head { padding-right:0 }
+
+.modal-body .context { margin-bottom:14px }
+
+.modal-body .page-head .actions { display:none }
+
+.modal-body .editor { padding:18px }
+
+.modal-error { color:#a42535 }
+
+body:has(dialog[open]) { overflow:hidden }
+
+.cc-modal { position:fixed }
+
+.modal-toolbar { position:absolute;top:24px;right:24px;background:transparent }
+
+.modal-toolbar button { width:42px;height:42px;font-size:1.2rem }
+
+.modal-body .page-head { padding-right:60px;align-items:flex-start;min-height:42px;margin-bottom:24px;flex-wrap:wrap }
+
+.modal-body .page-head h1 { line-height:42px }
+
+.modal-body .page-head .actions { display:flex;flex-wrap:wrap }
+
+.modal-body .page-head .actions:empty { display:none }
+
+.modal-body .editor { margin-top:20px;gap:20px;align-items:start }
+
+.modal-body .editor label { align-content:start }
+
+.modal-body .editor input:not([type=hidden]),
+.modal-body .editor select { min-height:42px }
+
+.modal-body>.error { margin-top:12px;margin-right:60px }
+
+@media(max-width:540px) {
+.modal-toolbar { top:24px;right:24px }
+}

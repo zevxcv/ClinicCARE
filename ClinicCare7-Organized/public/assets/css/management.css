@@ -1,0 +1,6 @@
+/* management.css — edit styles for management. */
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-management, .modal-body[data-page="management"]) { --page-title-color: #202d39; }
+:where(.page-management, .modal-body[data-page="management"]) h1 { color: var(--page-title-color); }

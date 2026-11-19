@@ -1,0 +1,7 @@
+/* student-profile.css — edit styles for student profile. */
+@import url("students.css");
+.page-students>.panel.padded { margin-top:22px }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-students, .modal-body[data-page="students"]) { --page-title-color: #202d39; }
+:where(.page-students, .modal-body[data-page="students"]) h1 { color: var(--page-title-color); }

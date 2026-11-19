@@ -1,0 +1,21 @@
+/* inventory.css — edit styles for inventory. */
+.inventory-metrics a.metric { color: inherit; text-decoration: none; }
+
+.inventory-metrics a.metric:hover,
+.inventory-metrics a.metric[aria-current="true"] { outline: 2px solid currentColor; outline-offset: -2px; }
+
+.inventory-metrics a.metric { min-height:100px }
+
+.inventory-metrics .metric-icon { border-radius:12px;background:#c9efee;color:#008b8d }
+
+.inventory-metrics b { font-size:1rem }
+
+.inventory-metrics small { font-weight:400;font-size:.95rem }
+
+@media(max-width:540px) {
+.inventory-metrics a.metric { padding:16px }
+}
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-inventory, .modal-body[data-page="inventory"]) { --page-title-color: #202d39; }
+:where(.page-inventory, .modal-body[data-page="inventory"]) h1 { color: var(--page-title-color); }

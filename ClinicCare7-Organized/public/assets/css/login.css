@@ -1,0 +1,29 @@
+/* login.css — edit styles for login. */
+.login { min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-content:center;width:min(92%,1040px);margin:auto }
+
+.login-brand,
+.login-form { padding:clamp(22px,5vw,55px);min-height:410px;display:flex;flex-direction:column;justify-content:center }
+
+.login-brand { align-items:center;text-align:center;background:linear-gradient(135deg,#233949,#506473);border-radius:32px 0 0 32px }
+
+.login-brand img { max-width:100%;width:330px;background:#f8fcfd;padding:15px;border-radius:14px }
+
+.login-brand p { color:#e0eaf1;margin-top:24px }
+
+.login-form { background:#ffffff6e;border:1px solid #ffffff85;border-radius:0 32px 32px 0 }
+
+.login-form form { display:grid;gap:18px }
+
+.login-form button { padding:13px }
+
+@media(max-width:540px) {
+.login { grid-template-columns:1fr }
+.login-brand { border-radius:22px 22px 0 0;min-height:0 }
+.login-form { border-radius:0 0 22px 22px;min-height:0 }
+.login-brand p { margin:12px 0 0 }
+.login-brand img { width:225px }
+}
+
+/* Page-only title color. Change this value to customize this page. */
+.login { --page-title-color: #202d39; }
+.login h1 { color: var(--page-title-color); }

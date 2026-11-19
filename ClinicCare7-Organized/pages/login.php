@@ -1,0 +1,5 @@
+<?php
+// Rendered through public/index.php after authentication and route validation.
+if (!defined('CLINICCARE_APP')) { http_response_code(403); exit('Open this page through the application.'); }
+?>
+<main class="login"><div class="login-brand"><img src="assets/cliniccare.png" alt="ClinicCare"><p>School Clinic Management System</p></div><div class="login-form"><h1>Welcome back</h1><p>Sign in to manage your school clinic.</p><?php if($expired)echo '<p role="alert">Your session expired. Sign in again to continue.</p>';?><?php if($error)echo '<p role="alert" class="error">'.e($error).'</p>';?><form method="post"><?=token()?><input type="hidden" name="action" value="login"><label>Username or email<input name="login" autocomplete="username" required></label><label>Password<input id="signin-password" type="password" name="password" autocomplete="current-password" required></label><button type="button" id="toggle-password" aria-pressed="false">Show password</button><p id="caps-lock" role="status" hidden>Caps Lock is on.</p><button class="primary">Sign In to ClinicCare</button></form></div></main>

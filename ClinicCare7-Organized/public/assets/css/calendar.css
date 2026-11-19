@@ -1,0 +1,91 @@
+/* calendar.css — edit styles for calendar. */
+.calendar-scroll { overflow:auto }
+
+.calendar-grid { min-width:640px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);border-radius:10px;overflow:hidden;background:#e1e6ee }
+
+.weekday,
+.day { border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px }
+
+.weekday { text-align:center;font-weight:650;color:var(--muted) }
+
+.day { min-height:105px }
+
+.day.muted { background:#ffffff56;color:#65778b }
+
+.today { background:var(--teal);color:white;border-radius:50%;display:inline-grid;place-items:center;width:29px;height:29px }
+
+.event { margin-top:5px;padding:5px;border:1px solid #00878040;background:#e2f6f3;color:#00666a;border-radius:4px;font-size:.78rem;overflow-wrap:anywhere }
+
+.event.teal { border-left:4px solid #008c87 }
+
+.event.red { border-left:4px solid #c63845 }
+
+.event.blue { border-left:4px solid #2868b0 }
+
+.event.purple { border-left:4px solid #8254ac }
+
+.workflow-grid .event { display:block;margin:.3rem 0 }
+
+.time-slot { min-height:2.4rem;border-bottom:1px solid #dce8ea;display:flex;align-items:center;gap:.75rem }
+
+.time-slot.drag-over { background:#d5f0ee }
+
+.time-slot time { min-width:3rem }
+
+.workflow-grid .calendar-grid { min-width:400px }
+
+.calendar-toolbar { display:flex;align-items:center;gap:16px;padding:18px 24px;margin-bottom:24px;flex-wrap:wrap }
+
+.calendar-toolbar .date-jump,
+.calendar-toolbar .actions { margin:0 }
+
+.calendar-toolbar .add-event { margin-left:auto }
+
+.calendar-toolbar .add-event a { background:var(--teal);color:white }
+
+.calendar-heading { display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px }
+
+.calendar-heading h2 { margin:0 }
+
+.calendar-heading .actions { margin:0 }
+
+.calendar-arrow { font-size:1.5rem;width:42px;padding:0 }
+
+.calendar-help { font-size:.8rem;margin:0 0 16px }
+
+.calendar-grid { background:#ffffff35 }
+
+.calendar-grid .day { display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:12px;min-height:95px;border-radius:0;border-top:0;border-left:0;background:transparent;padding:12px;color:#075b60;white-space:normal }
+
+.calendar-grid .day:hover { background:#ffffff90 }
+
+.calendar-grid .day.current-day { background:#a4ded8;color:#064d50 }
+
+.calendar-grid .day.selected-day { box-shadow:inset 0 0 0 2px #2589d5 }
+
+.calendar-grid .day.muted { color:#647783;opacity:.65 }
+
+.day-icons { display:flex;flex-wrap:wrap;gap:5px }
+
+.schedule-icon { display:inline-flex;vertical-align:middle;margin-right:5px }
+
+.schedule-icon svg { width:17px;height:17px }
+
+.day-icons .schedule-icon { margin:0 }
+
+.agenda-items .event { padding:14px;border-radius:10px;margin:12px 0;font-size:.9rem }
+
+.agenda-detail>h2 { margin-top:28px }
+
+@media(max-width:850px) {
+.calendar-toolbar { gap:12px }
+}
+
+@media(max-width:540px) {
+.calendar-toolbar .add-event { margin-left:0 }
+.calendar-toolbar .actions { flex-wrap:wrap }
+}
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-calendar, .modal-body[data-page="calendar"]) { --page-title-color: #202d39; }
+:where(.page-calendar, .modal-body[data-page="calendar"]) h1 { color: var(--page-title-color); }

@@ -1,0 +1,62 @@
+/* overview.css — edit styles for overview. */
+.overview-grid { display:grid;grid-template-columns:2.1fr 1fr;gap:20px }
+
+.bedrow { padding:16px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center;justify-content:space-between }
+
+.bedrow:last-child { border:none }
+
+@media(max-width:850px) {
+.overview-grid { grid-template-columns:1fr }
+}
+
+.section-link:hover,
+.bedrow:hover,
+.overview-alert:hover { background:#ffffffb5 }
+
+.overview-grid { grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:20px }
+
+.overview-grid section { min-width:0 }
+
+.section-link { color:inherit;text-decoration:none }
+
+.bedrow { color:inherit;text-decoration:none;padding:22px 0 }
+
+.bedrow>div { flex:1 }
+
+.overview-alert { display:flex;align-items:center;gap:12px;padding:13px 10px;color:inherit;border:1px solid var(--line);background:#ffffff3a }
+
+.overview-alert>div { flex:1;min-width:0 }
+
+.overview-alert b { font-size:.9rem }
+
+.overview-alert .metric-icon svg { width:22px;height:22px;color:var(--teal) }
+
+.mini-heading { display:flex;justify-content:space-between;align-items:center;gap:10px;margin:14px 0 }
+
+.mini-calendar { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-bottom:20px }
+
+.mini-calendar>span { text-align:center;font-size:.8rem;color:var(--muted);padding:6px 0 }
+
+.mini-date { display:grid;place-items:center;min-height:42px;text-decoration:none;border:1px solid var(--line);border-radius:9px;color:inherit;background:#ffffff60 }
+
+.mini-date.muted { opacity:.45 }
+
+.mini-date.current-day { background:#a4ded8;color:#054e53 }
+
+@media(max-width:1100px) {
+.overview-grid { grid-template-columns:1fr 1fr }
+.overview-grid>section:last-child { grid-column:1/-1 }
+}
+
+@media(max-width:850px) {
+.overview-grid { grid-template-columns:1fr }
+.overview-grid>section:last-child { grid-column:auto }
+}
+
+.page-overview .page-head a[title="New Visit"] { background:var(--teal);color:white }
+
+.page-overview .page-head a[title="Emergency Incident"] { background:#fff5f5;color:#a42535;border-color:#dcb4b8;box-shadow:none }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-overview, .modal-body[data-page="overview"]) { --page-title-color: #202d39; }
+:where(.page-overview, .modal-body[data-page="overview"]) h1 { color: var(--page-title-color); }

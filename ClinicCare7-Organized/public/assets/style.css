@@ -1,0 +1,22 @@
+/* Optional complete stylesheet manifest. The app loads common, modal, form, and current page styles directly. */
+@import url("css/common.css");
+@import url("css/modals.css");
+@import url("css/form.css");
+@import url("css/overview.css");
+@import url("css/students.css");
+@import url("css/student-profile.css");
+@import url("css/visits.css");
+@import url("css/visit-details.css");
+@import url("css/beds.css");
+@import url("css/inventory.css");
+@import url("css/stock-ledger.css");
+@import url("css/medicine-batches.css");
+@import url("css/notifications.css");
+@import url("css/calendar.css");
+@import url("css/reports.css");
+@import url("css/management.css");
+@import url("css/incidents.css");
+@import url("css/document.css");
+@import url("css/remove.css");
+@import url("css/login.css");
+@import url("css/not-found.css");

@@ -1,0 +1,31 @@
+/* reports.css — edit styles for reports. */
+.reportgrid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px }
+
+@media(max-width:850px) {
+.reportgrid { grid-template-columns:1fr }
+}
+
+.report-toolbar .export-actions { margin-left:auto;display:flex;gap:10px }
+
+.page-reports>.metrics { grid-template-columns:repeat(3,minmax(0,1fr)) }
+
+.page-reports>.metrics article { text-align:center;justify-content:center;min-height:155px }
+
+.page-reports .reportgrid { gap:20px }
+
+.reportgrid>section { min-height:230px }
+
+@media(max-width:850px) {
+.report-toolbar .export-actions { margin-left:0 }
+.reportgrid { grid-template-columns:1fr }
+}
+
+@media(max-width:540px) {
+.page-reports>.metrics { grid-template-columns:1fr }
+}
+
+.report-metrics strong { margin:14px 0 4px;font-size:2.6rem }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-reports, .modal-body[data-page="reports"]) { --page-title-color: #202d39; }
+:where(.page-reports, .modal-body[data-page="reports"]) h1 { color: var(--page-title-color); }

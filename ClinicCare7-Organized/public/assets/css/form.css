@@ -1,0 +1,11 @@
+/* form.css — edit styles for form. */
+.editor { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:900px }
+
+.editor .actions,
+.editor>p { grid-column:1/-1 }
+
+@media(max-width:540px) {
+.editor { grid-template-columns:1fr }
+}
+
+.editor { padding:28px;gap:22px }

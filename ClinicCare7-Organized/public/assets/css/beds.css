@@ -1,0 +1,86 @@
+/* beds.css — edit styles for beds. */
+.bedgrid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px }
+
+.bedgrid article { overflow:hidden }
+
+.bedgrid header,
+.bedgrid footer { display:flex;justify-content:space-between;align-items:center;gap:7px;padding:14px;background:#ffffff45 }
+
+.bedgrid h2 { margin:0 }
+
+.bedbody { min-height:130px;padding:18px }
+
+.bedbody strong,
+.bedbody time { display:block }
+
+.bedgrid footer { justify-content:flex-end }
+
+@media(max-width:850px) {
+.bedgrid { grid-template-columns:1fr }
+}
+
+.bedgrid { gap:20px;align-items:stretch }
+
+.bedgrid article { display:flex;flex-direction:column }
+
+.bedgrid header,
+.bedgrid footer { padding:22px;flex-wrap:wrap }
+
+.bedbody { padding:24px;flex:1;min-height:230px }
+
+.bedbody .patient-name { font-size:1.25rem;margin-bottom:8px }
+
+.bedbody .details { grid-template-columns:110px 1fr;font-size:.9rem }
+
+.bedbody time { margin-top:16px;color:var(--teal) }
+
+.empty-bed { text-align:center;margin:18px 0 }
+
+.empty-bed svg { width:75px;height:75px;color:var(--teal) }
+
+.empty-bed+p { text-align:center }
+
+.bedgrid footer { justify-content:flex-start;gap:12px }
+
+.bedgrid footer>a:first-child { background:var(--teal);color:white }
+
+.bedgrid footer form { display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:0 }
+
+@media(max-width:1100px) {
+.bedgrid { grid-template-columns:1fr }
+.bedbody { min-height:0 }
+}
+
+@media(max-width:540px) {
+.bedgrid header,
+.bedgrid footer { padding:18px }
+}
+
+.bedgrid article { display:grid;grid-template-rows:auto 1fr auto }
+
+.bedgrid footer { min-height:114px;align-items:flex-end;align-content:flex-end }
+
+.bedgrid footer form:not(.inline) { flex:1;min-width:0;display:grid;grid-template-columns:minmax(130px,1fr) auto;align-items:end }
+
+.bedgrid footer label { min-width:0 }
+
+.bedgrid footer select { width:100%;height:42px }
+
+.bedgrid footer .button,
+.bedgrid footer button { height:42px }
+
+.bedgrid .details { grid-template-columns:minmax(100px,120px) minmax(0,1fr) }
+
+@media(max-width:540px) {
+.bedgrid footer form:not(.inline) { flex-basis:100%;grid-template-columns:1fr }
+.bedgrid footer { min-height:0 }
+}
+
+@media(min-width:1101px) and (max-width:1400px) {
+.bedgrid { grid-template-columns:1fr }
+.bedbody { min-height:0 }
+}
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-beds, .modal-body[data-page="beds"]) { --page-title-color: #202d39; }
+:where(.page-beds, .modal-body[data-page="beds"]) h1 { color: var(--page-title-color); }

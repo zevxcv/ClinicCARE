@@ -1,0 +1,6 @@
+/* visits.css — edit styles for visits. */
+.page-visits .table { margin-top:24px }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-visits, .modal-body[data-page="visits"]) { --page-title-color: #202d39; }
+:where(.page-visits, .modal-body[data-page="visits"]) h1 { color: var(--page-title-color); }

@@ -1,0 +1,6 @@
+/* incidents.css — edit styles for incidents. */
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-incidents, .modal-body[data-page="incidents"]) { --page-title-color: #202d39; }
+:where(.page-incidents, .modal-body[data-page="incidents"]) h1 { color: var(--page-title-color); }

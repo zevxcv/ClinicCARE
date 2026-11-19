@@ -1,0 +1,7 @@
+/* visit-details.css — edit styles for visit details. */
+@import url("visits.css");
+.page-visits>.panel.padded+.panel { margin-top:22px }
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-visits, .modal-body[data-page="visits"]) { --page-title-color: #202d39; }
+:where(.page-visits, .modal-body[data-page="visits"]) h1 { color: var(--page-title-color); }

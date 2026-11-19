@@ -1,0 +1,6 @@
+/* remove.css — edit styles for remove. */
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-remove, .modal-body[data-page="remove"]) { --page-title-color: #202d39; }
+:where(.page-remove, .modal-body[data-page="remove"]) h1 { color: var(--page-title-color); }

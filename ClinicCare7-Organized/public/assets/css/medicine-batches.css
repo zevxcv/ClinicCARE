@@ -1,0 +1,7 @@
+/* medicine-batches.css — edit styles for medicine batches. */
+@import url("inventory.css");
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-inventory, .modal-body[data-page="inventory"]) { --page-title-color: #202d39; }
+:where(.page-inventory, .modal-body[data-page="inventory"]) h1 { color: var(--page-title-color); }

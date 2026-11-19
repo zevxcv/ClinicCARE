@@ -1,0 +1,6 @@
+/* not-found.css — edit styles for not found. */
+
+
+/* Page-only title color. Change this value to customize this page. */
+:where(.page-not-found, .modal-body[data-page="not-found"]) { --page-title-color: #202d39; }
+:where(.page-not-found, .modal-body[data-page="not-found"]) h1 { color: var(--page-title-color); }
